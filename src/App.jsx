@@ -22,13 +22,13 @@ const AppLayOut = ()=>{
 const appRouter = createBrowserRouter(
   [
     {
-      path:"/",
+      path:"",
       element:<AppLayOut/>,
       errorElement:<Error></Error>,
       children:[
         {
           path:"/",
-          element:<Body/>
+          element:<Body></Body>
         },
         {
           path:"About",
@@ -42,7 +42,7 @@ const appRouter = createBrowserRouter(
       ]
     },
     {
-      path:"/cart",
+      path:"/Cart",
       element:<Cart></Cart>
     }
 

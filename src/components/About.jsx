@@ -1,6 +1,7 @@
+import "./about.scss"
 const About= ()=>{
     return(
-        <h1>About React Js</h1>
+        <div className="">About</div>
     )
 }
 export default About;
