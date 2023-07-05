@@ -1,6 +1,6 @@
 
 
-// Shimmer card to display with animation
+import "./schimmer.scss";
 const CardShimmer = () => {
   return (
     <div className="shimmer-card">
