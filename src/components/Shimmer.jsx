@@ -1,6 +1,6 @@
 
 
-import "./schimmer.scss";
+import "./schimmer.css";
 const CardShimmer = () => {
   return (
     <div className="shimmer-card">

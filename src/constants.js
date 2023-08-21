@@ -11,3 +11,16 @@ export const MENU_ITEM_TYPE_KEY =
   "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 export const RESTAURANT_TYPE_KEY =
   "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
+
+  export const Github_API_User = "https://api.github.com/users/";
+  export const Github_UserName = "dharamveer742";
+  export const options = {
+    method: "GET",
+    headers: {
+      Authorization: "",
+    },
+  };
+
+ export const Github_Link="";
+ export const Email_Link="";
+ export const Linkedin_Link ="";

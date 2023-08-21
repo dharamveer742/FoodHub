@@ -1,41 +1,43 @@
 import { IMG_CDN_URL } from "../constants";
-import "./RestaurantCard.scss";
-// Restaurant card component: Image, name, cuisine
+import "./RestaurantCard.css";
+
 const RestaurantCard = ({
   cloudinaryImageId,
   name,
   cuisines,
-  area,
-  lastMileTravelString,
-  costForTwoString,
-  avgRating,
+  areaName,
+  sla,
+  costForTwo,
+  avgRatingString,
 }) => {
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
       <h3>{name}</h3>
       <h5>{cuisines.join(", ")}</h5>
-      <h5>{area}</h5>
+      <h5>{areaName}</h5>
       <span>
+        
         <h4
           style={
-            avgRating < 4
-              ? { backgroundColor: "var(--light-red)" }
-              : avgRating === "--"
-              ? { backgroundColor: "white", color: "black" }
-              : { color: "white" }
+            avgRatingString < 4
+              ? { backgroundColor: "rgb(236, 56, 56)" }
+              : avgRatingString === "--"
+                ? { backgroundColor: "white", color: "black" }
+                : { backgroundColor: "#00ad1d" }
           }
         >
           <i className="fa-solid fa-star"></i>
-          {avgRating}
+          {avgRatingString}
         </h4>
         <h4>•</h4>
-        <h4>{lastMileTravelString}</h4>
+        <h4>{sla?.lastMileTravelString ?? '2.0 km'}</h4>
         <h4>•</h4>
-        <h4>{costForTwoString}</h4>
+        <h4>{costForTwo ?? '₹200 for two'}</h4>
       </span>
     </div>
   );
 };
+
 
 export default RestaurantCard;

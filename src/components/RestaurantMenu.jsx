@@ -1,4 +1,4 @@
-import "./RestaurantMenu.scss";
+import "./RestaurantMenu.css";
 import { useParams } from "react-router-dom";
 import {
   swiggy_menu_api_URL,
@@ -10,6 +10,11 @@ import {
 
 import { MenuShimmer } from "./Shimmer";
 import useResMenuData from "../hooks/useResMenuData";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
+
+
+
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -19,6 +24,11 @@ const RestaurantMenu = () => {
     RESTAURANT_TYPE_KEY,
     MENU_ITEM_TYPE_KEY
   );
+
+  const dispatch = useDispatch();
+  const addToCart =(product)=>{
+    dispatch(addItem(product));
+  }
 
   return !restaurant ? (
     <MenuShimmer></MenuShimmer>
@@ -54,7 +64,7 @@ const RestaurantMenu = () => {
         </div>
       </div>
 
-      {/* Restaurant-menu content */}
+      
 
       <div className="restaurant-menu-content">
         <div className="menu-items-container">
@@ -85,7 +95,8 @@ const RestaurantMenu = () => {
                       alt={item?.name}
                     />
                   )}
-                  <button className="add-btn"> ADD +</button>
+                  
+                  <button className="add-btn" onClick={()=>{addToCart(item)}} > ADD +</button>
                 </div>
               </div>
             ))}
