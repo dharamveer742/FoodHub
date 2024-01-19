@@ -91,14 +91,5 @@ const Body = () => {
   );
 };
 export default Body;
-/*
-data fetch 
-restaurant cards
-search
 
-to fix
-header sticky
-routes
-restaurant card labels
 
-*/

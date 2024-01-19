@@ -9,7 +9,7 @@ const useResMenuData = (
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
-    getRestaurantInfo(); // call getRestaurantInfo function so it fetch api data and set data in restaurant state variable
+    getRestaurantInfo(); 
   }, []);
 
   async function getRestaurantInfo() {
@@ -60,5 +60,3 @@ const useResMenuData = (
 };
 export default useResMenuData;
 
-// compare two objects :- == and === compares by reference but when we want to compare with thier contents we can use stringify()
-// how to compare two arrays 

@@ -29,3 +29,13 @@ i{
 .fa-brands:hover{
     cursor: pointer;
 }
+
+.year{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-copyright{
+    font-size: 15px;
+    color:black;
+}

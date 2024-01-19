@@ -1,5 +1,6 @@
 import "./Footer.css";
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="Footer">
       <div className="social-media">
@@ -8,7 +9,7 @@ const Footer = () => {
         <i className="fa-brands fa-square-google-plus"></i>
       </div>
       <div className="footer-bottom">
-        <p id="copyright">Copyright @2023 Designed by DHARAMVEER</p>
+        <p className="year" id="copyright">Copyright &nbsp; <i class="fa-regular fa-copyright"></i>&nbsp;{year} Designed by DHARAMVEER</p>
       </div>
     </div>
   );
